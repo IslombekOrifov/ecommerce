@@ -1,0 +1,8 @@
+{% autoescape off %}
+Salom, {{ user.username }},
+
+Ro'yxatdan o'tishni tasdiqlash uchun quyidagi link ustiga bosing:
+
+{{ protocol }}:/{{ domain }}{% url "account:activate" uidb64=uid token=token %}
+
+{% endautoescape %}
